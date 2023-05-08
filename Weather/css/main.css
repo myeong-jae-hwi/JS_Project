@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  height: 930px;
+  background: linear-gradient(150deg, #56CCF2, #2F80ED); 
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+
+#title{
+  margin-top: 7vw;
+  margin-bottom: 2vw;
+}
+
+a{
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'a시월구일1';
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  max-width: 500px;
+  height: 4vw;
+  max-height: 50px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 50px;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+  font-size: 20px;
+  padding: 0;
+  z-index: 2;
+}
+
+.search-container input[type="text"] {
+  width: 93%;
+  height: 100%;
+  font-family: 'a시월구일1';
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50px;
+  font-size: 1vw;
+  border: none;
+  outline: none;
+  color: white;
+  z-index: 2;
+}
+
+.search-container button[type="submit"] {
+  position: absolute;
+  width: 3vw;
+  max-width: 35px;
+  height: 35px;
+  background-size: contain;
+  background: url("../image/search.png") no-repeat center;
+  right: 6px;
+  max-height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#container{
+  display: flex;  
+  padding-top: 30px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  max-width: 800px;
+  width: 70vw;
+  max-height: 500px;
+  height: 40vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+#main{
+  position: absolute;
+  margin-bottom: 8%;
+  width: 45%;
+  max-width: 250px;
+  height: 75%;
+  font-size: 180%;
+  color: white;
+  font-family: 'Roboto';
+}
+
+img{
+  margin-top: 2vw;
+  width: 60%;
+  height: auto;
+}
+
+#temp{
+  font-size: 4vw;
+  margin-top: 5%;
+  letter-spacing: -2px;
+}
+
+#main > h2{
+  font-size: 2vw;
+  bottom: 5px;
+  font-weight: lighter;
+}
+
+#main > h3{
+  margin-top: 15px;
+  font-size: 1vw;
+  font-family: 'a시월구일1';
+  font-weight: lighter;
+}
+
+.btn{
+  position: absolute;
+  border: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f7faff;
+  cursor: pointer;
+  letter-spacing: -1px;
+}
+
+#rain_btn{
+  top: 30px;
+  right: 20px;
+}
+
+#snow_btn{
+  top: 30px;
+ right: 100px;
+}

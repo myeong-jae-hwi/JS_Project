@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="form_css.css">
+
+</head>
+<body>
+  <form id="signup">
+    <fieldset>
+      <legend>회원 추가</legend>
+      <ul>
+        <li>
+          <label for="fullname">이름</label>
+          <input id="fullname" type="text" placeholder="이름을 입력하세요" required>
+        </li>
+        <li>
+          <label for="birth">생년월일</label>
+          <input id="birth" name="birth" type="date" max="2004-12-31">
+        </li>
+        <li>
+          <label>성별</label>
+          <label>남 <input id="man" name="gender" type="radio" value="남"></label>
+          <label>여 <input id="woman" name="gender" type="radio" value="여"></label>
+        </li>  
+      </ul>
+    </fieldset>
+    <fieldset>
+      <button onclick="plus()"> 추가 </button> 
+    </fieldset>
+  </form>
+<script>
+  function plus(){
+  opener.add()
+  next()
+  console.log(rows)
+  }
+
+</script>
+</body>
+</html>

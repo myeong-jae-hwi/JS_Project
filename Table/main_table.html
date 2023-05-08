@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <h1>
+    회원정보
+  </h1>
+  <button onclick='openform()'>추가</button>
+
+  <table id="graph" >
+    <thead>
+      <tr>
+        <th>번호</th><th>이름</th><th>나이</th><th>성별</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="data" onclick="change()">
+        <td>1</td><td>명재휘</td><td>24</td><td>남</td>
+      </tr>
+    </tbody>
+
+  </table>
+  
+  <script>
+    var no = 1;
+    let openWin
+    var i=1;
+
+    
+    // 자식 폼 열기
+    function openform(){
+      window.name = "parentForm";
+      openWin = window.open("form.html", "Child", "width=400, height=300, left=350, top=150")
+    }
+    
+    // 테이블에 내용추가 함수
+    function add(){
+      // 테이블 이름 정의 
+      const table = document.getElementById('graph');
+      const newRow = table.insertRow();
+
+      // 테이블 각각 열 정의
+      const newCell1 = newRow.insertCell(0);
+      const newCell2 = newRow.insertCell(1);
+      const newCell3 = newRow.insertCell(2);
+      const newCell4 = newRow.insertCell(3);
+
+      // 현재 년도 반환
+      var dat = new Date()
+      var Cyear = dat.getFullYear();
+      var Byear = parseInt(openWin.document.getElementById("birth").value);
+
+      // 성별 판단
+
+      newCell1.innerText = no += 1
+      newCell2.innerText = openWin.document.getElementById("fullname").value
+      newCell3.innerText = Cyear - Byear + 1
+      newCell4.innerText = openWin.document.querySelector('input[name="gender"]:checked').value
+
+      var deleteBtn = document.createElement("button");
+      deleteBtn.innerHTML = "Delete"
+
+    }
+
+    // 선택된 테이블 색 변경
+    function change(){
+      //var row = document.getSelection('tr')
+      console.log("hi")
+    }
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.snow{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:white;
+  position: absolute;
+  top: -8px;
+}
+
+.snow:nth-child(4n){
+  width: 12px;
+  height: 12px;
+}
+
+@keyframes fall{
+  from{
+
+  }
+  to{
+    transform: translateY(930px);
+  }
+}

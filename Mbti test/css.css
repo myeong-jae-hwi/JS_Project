@@ -1,0 +1,160 @@
+* { margin: 0px; padding: 0px;}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Black Han Sans', sans-serif;
+
+}
+
+#Title{
+  font-size: 40px;
+}
+
+@keyframes yureru {
+  0% { transform: translate(0px, 0px) rotateZ(0deg); }
+  10% { transform: translate(-20px, 0px) rotateZ(-10deg); }
+  20% { transform: translate(0px, 0px) rotateZ(0deg); }
+  30% { transform: translate(20px, 0px) rotateZ(10deg); }
+  40% { transform: translate(0px, 0px) rotateZ(0deg); }
+}
+
+
+#monsterball {
+  margin: 30px auto;
+  animation: yureru 1s ease infinite;
+  width: 200px;
+  height: 200px;
+}
+
+.soto {
+  width: 200px;
+  height: 100px;
+  border: 5px solid black;
+}
+
+#center {
+  border: 5px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  left: 75px;
+  cursor: pointer;
+}
+
+#nakanaka:hover{
+  transition: .5s;
+  box-shadow: 2px 2px 2px
+}
+
+#nakanaka{
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3.25px;
+  left: 3.25px;
+}
+
+#ue {
+  background-color: red;
+  border-radius: 200px 200px 0px 0px;
+}
+
+#shita {
+  background-color: white;
+  border-radius: 0px 0px 200px 200px;
+  position: relative;
+  top: -5px;
+}
+
+.question{
+  display: inline-block;
+  font-weight: lighter;
+}
+
+#button{
+  margin-top: 20px;
+  margin-left: 8px;
+  width: 180px;
+  height: 60px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.btn_top{
+  background-color: red;
+  width: 100%;
+  height: 30px;
+  border: black 3px solid;
+  border-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.btn_bottom{
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  border : black 3px solid;
+  border-top: 0px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#letter{
+  position: absolute;
+  margin-top: 5px;
+  z-index: 2;
+  display: block;
+  width: 180px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Bruno Ace';
+}
+
+#contant{
+  position: absolute;
+  visibility: hidden;
+  margin-top: -50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.option{
+  display: inline-block;
+  margin: 15px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+}
+
+.option_top{
+  background-color: red;
+  width: 100%;
+  height: 30px;
+  border: black 3px solid;
+  border-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+  z-index: 2;
+}
+
+.option:hover{
+  box-shadow: 2px 2px 2px #ccc
+}

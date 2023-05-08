@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <input id = "start" type = "button" value="Start" onclick="timer_start()">
+  <input id = "stop" type = "button" value="stop" onclick = "stop()">
+
+
+
+  <h1 id = timer>00:00:00</h1>
+
+  <input type="button" value="인원 A" onclick="label_1()">
+  <input type="button" value="인원 B" onclick="label_2()">
+  <input type="button" value="인원 C" onclick="label_3()">
+
+  <h2 id = "timer_1">NONE</h2>
+  <h2 id = "timer_2">NONE</h2>
+  <h2 id = "timer_3">NONE</h2>
+
+  <input type="button" value="인원 D"onclick="label_4()">
+  <input type="button" value="인원 E"onclick="label_5()">
+  <input type="button" value="인원 F"onclick="label_6()">
+
+  <h2 id = "timer_4">NONE</h2>
+  <h2 id = "timer_5">NONE</h2>
+  <h2 id = "timer_6">NONE</h2>
+
+<script>
+  let time = 1;
+  const stopwatch = document.getElementById("timer");
+  const text_1 = document.getElementById("timer_1")
+  const text_2 = document.getElementById("timer_2")
+  const text_3 = document.getElementById("timer_3")
+  const text_4 = document.getElementById("timer_4")
+  const text_5 = document.getElementById("timer_5")
+  const text_6 = document.getElementById("timer_6")
+
+  let hh;
+  let mm;
+  let ss;
+
+  function timer() {
+
+  let sec = time;
+  let min = 0;
+  let hour = 0;
+  let minute = 0;
+
+  time ++;
+
+  if (time >= 60){
+    sec = (time % 60)
+    min = parseInt(time / 60)
+  }
+
+  if (min >= 60){
+    min = (min % 60)
+    hour = parseInt(time / 3600)
+  }
+
+  var inner = (String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'))
+
+  stopwatch.innerText = inner;
+  hh = String(hour).padStart(2,'0')
+  mm = String(min).padStart(2,'0')
+  ss =  String(sec).padStart(2,'0')
+}
+
+let interId;
+
+function timer_start(){
+  interId = setInterval(timer, 1000);
+}
+
+function stop(){
+  clearInterval(interId)
+}
+
+function label_1(){
+  let hour_1 = hh
+  let min_1 = mm
+  let sec_1 = ss
+
+  t1 = hour_1 + ":" + min_1 + ":" + sec_1;
+  text_1.innerText = t1;
+}
+
+function label_2(){
+  let hour_2 = hh
+  let min_2 = mm
+  let sec_2 = ss
+
+  text_2.innerText =  hour_2 + ":" + min_2 + ":" + sec_2;
+}
+
+function label_3(){
+  let hour_3 = hh
+  let min_3 = mm
+  let sec_3 = ss
+
+  text_3.innerText =  hour_3 + ":" + min_3 + ":" + sec_3;
+}
+
+function label_4(){
+  let hour_4 = hh
+  let min_4 = mm
+  let sec_4 = ss
+
+  text_4.innerText =  hour_4 + ":" + min_4 + ":" + sec_4;
+}
+
+function label_5(){
+  let hour_5 = hh
+  let min_5 = mm
+  let sec_5 = ss
+
+  text_5.innerText =  hour_5 + ":" + min_5 + ":" + sec_5;
+}
+
+function label_6(){
+  let hour_6 = hh
+  let min_6 = mm
+  let sec_6 = ss
+
+  text_6.innerText =  hour_6 + ":" + min_6 + ":" + sec_6;
+}
+
+</script>
+</body>
+</html>

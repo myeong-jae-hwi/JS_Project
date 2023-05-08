@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:ital,wght@0,500;1,300&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <a href="#">
+    D-day
+  </a>
+  
+  <div class="contaner">
+
+    <!-- 날짜 입력 -->
+    <div>
+      <input id="Date" type="date" data-placeholder="원하는 날짜를 입력하세요" required>
+      <button onclick="timer_start()">확인</button>
+    </div>
+
+    <!-- 컨텐츠 영역 -->
+    <div class="calendar">
+      <div class="title">Day</div>
+      <div id="ddd">N</div>
+    </div>
+
+    <div class="calendar">
+      <div class="title">Hour</div>
+      <div id="hour">O</div>
+    </div>
+
+    <div class="calendar">
+      <div class="title">Min</div>
+      <div id="min">N</div>
+    </div>
+
+    <div class="calendar">
+      <div class="title">Sec</div>
+      <div id="sec">E</div>
+    </div>
+  </div>
+
+  <script>
+    // input에서 해당 날짜 이전은 선택 X 
+    var now = Date.now()
+    var timeOff = new Date().getTimezoneOffset() * 60000;
+    var today = new Date(now - timeOff).toISOString().split("T")[0];
+    document.getElementById("Date").setAttribute("min", today);
+
+    // 끝나는 날짜 - 시작날짜 
+    function countdown() {
+
+      // 시작 날짜
+      var CurrentDay = new Date()
+
+      // 원하는 날짜 
+      var DesiredDate = document.querySelector("#Date").value;
+      var EndDate = new Date(DesiredDate);
+
+      // 값 계산 
+      const totalSeconds = (EndDate - CurrentDay) / 1000;   // 값이 밀리 초로 나오기 때문에 1000을 나누어 초로 변환 
+      const days = Math.floor(totalSeconds / 3600 / 24);    // 24로 나눈 몫 = 남은 날짜
+      const hours = Math.floor(totalSeconds / 3600) % 24;   // 24로 나눈 나머지 = 남은 시간
+      const min = Math.floor(totalSeconds / 60) % 60;
+      const sec = Math.floor(totalSeconds) % 60;
+
+      // 달력에 값 표시 
+      document.getElementById('ddd').innerText = days
+      document.getElementById('hour').innerText = (hours - 9)
+      document.getElementById('min').innerText = min
+      document.getElementById('sec').innerText = sec
+    }
+
+    let interId;
+
+    function timer_start() {
+      interId = setInterval(countdown, 1000);
+    }
+
+  </script>
+</body>
+
+</html>

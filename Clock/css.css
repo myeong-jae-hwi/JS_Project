@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.clock {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 8px solid;
+}
+
+#center{
+  position: absolute;
+  left: 125px;
+  top: 125px;
+  width: 1px;
+  height: 1px;
+  border: solid 2px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#hour {
+  position: absolute;
+  top: 45px;
+  left: 125px;
+  width: 3px;
+  height: 80px;
+  border: 1px solid;
+  border-radius: 3px;
+  background-color: black;
+  transform-origin: bottom;
+}
+
+
+#min {
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  width: 3px;
+  height: 100px;
+  border: 1px solid;
+  border-radius: 3px;
+  background-color: black;
+  transform-origin: bottom;
+}
+
+#sec {
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  width: 3px;
+  height: 100px;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: red;
+  transform-origin: bottom;
+}
+
