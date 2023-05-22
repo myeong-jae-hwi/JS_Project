@@ -70,8 +70,8 @@
 
     // 검색 버튼 클릭시 날씨 정보를 받아옴
     submit.addEventListener('click', function () {
-      fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value +
-          '&appid=6a24018e70842873eb6e29f47e203af0')
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=' + input.value +
+          '&appid=${APIKEY}`)
         .then(Response => Response.json()) //json 형태로 변환
         // data 처리
         .then(data => {
