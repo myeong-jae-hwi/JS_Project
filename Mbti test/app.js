@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('E_count: ',J_count);
       }
 
-      // 다음 질문으로 이동합니다.
+      // 다음 질문으로 이동
       currentQuestionIndex += 1;
       if (currentQuestionIndex < questions.length) {
         showQuestion();
