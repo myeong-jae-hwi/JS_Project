@@ -28,7 +28,7 @@ const questions = [
   {
     question: "포켓몬 배틀을 할 때 나는?",
     options: [
-      {text: "이기기 위해 전략적인 장소로 간다", value: "I"},
+      {text: "사람들 앞은 신경쓰여 무조건 조용한 곳으로!", value: "I"},
       {text: "모두들 나 싸우는것좀 봐 많은 사람들 앞으로!", value: "E"},
     ],
   },
@@ -45,7 +45,7 @@ const questions = [
     question: "새로운 포켓몬을 발견했을 때 나는?",
     options: [
       {text: "무슨 포켓몬인지 몰라도 일단 잡고본다.", value: "S"},
-      {text: "저 포켓몬은 진화하면 어떻게 될까? 내 팀과 잘 어울릴까? 하며 생각해본다.", value: "N"},
+      {text: "저 포켓몬은 내 팀과 잘 어울릴까? 하며 생각해본다.", value: "N"},
     ],
   },
 
@@ -68,7 +68,7 @@ const questions = [
   {
     question: "팀의 포켓몬을 선택할 때 우선 순위",
     options: [
-      {text: "타입, 스탯 등 구체적인 정보를 기반으로 선택", value: "T"},
+      {text: "타입, 스탯 등 정보를 기반으로 선택", value: "T"},
       {text: "개인적으로 친한 포켓몬 우선!", value: "F"},
     ],
   },
@@ -76,7 +76,7 @@ const questions = [
   {
     question: "포켓몬 배틀에서 졌을 때 나는?",
     options: [
-      {text: "같이 열심히 싸워준 포켓몬에게 위로를 한다.", value: "F"},
+      {text: "같이 싸워준 포켓몬에게 위로를 한다.", value: "F"},
       {text: "왜 졌는지 진 이유에 대해 분석한다.", value: "T"},
     ],
   },
@@ -85,7 +85,7 @@ const questions = [
     question: "쓰러져있는 야생 포켓몬을 발견했다!",
     options: [
       {text: "현재 포켓몬의 상황을 판단하고 바로 포켓몬 센터로 간다.", value: "T"},
-      {text: "시간이 조금 걸리더라도 불안해하는 포켓몬을 안심시킨 후에 포켓몬 센터로 간다.", value: "F"},
+      {text: "시간이 조금 걸리더라도 포켓몬을 안심시킨 후에 포켓몬 센터로 간다.", value: "F"},
     ],
   },
     // 여기부터 P~J 테스트
@@ -131,7 +131,10 @@ function showQuestion() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
   const optionButtons = document.querySelectorAll(".option");
+  var contants = document.getElementById("contants");
+
   optionButtons.forEach((button) => {
     button.addEventListener("click", () => {
       // I_count 또는 E_count를 증가시킵니다.

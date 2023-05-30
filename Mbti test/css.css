@@ -24,7 +24,7 @@ body{
   color: white;
   font-size: 70px;
   white-space: nowrap;
-
+  z-index: 2;
 }
 
 #Title::before{
@@ -98,10 +98,10 @@ body{
   top: -5px;
 }
 
-.question{
-  display: inline-block;
-  font-weight: lighter;
+#question{
+  margin-top: min(50vw,350px);
 }
+
 
 #button{
   margin-top: 20px;
@@ -148,21 +148,25 @@ body{
 
 #contant{
   position: absolute;
+  width: 70%;
+  height: 700px;
+  /* padding-top: 300px; */
   visibility: hidden;
-  margin-top: -50px;
+  /* margin-top: min(-400px, 40%); */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   color: white;
+  border-radius: 25px;
+  /* background-color: red; */
 }
 
 .option{
   display: inline-block;
   margin: 15px;
+  margin-top: 40px;
   width: 300px;
   height: 150px;
-  border-radius: 10px;
   color: white;
-  border: 2px solid black;
   cursor: pointer;
   font-size: large;
   font-weight: bold;
@@ -189,4 +193,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .option:hover{
   box-shadow: 8px 8px 8px #3636367d
+}
+
+#result{
+  font-size: 60px;
 }
