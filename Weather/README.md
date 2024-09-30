@@ -6,5 +6,5 @@
 
 **결과화면**
 
-<img src="image.png" alt='결과 화면' width=400>
+<img src="image.png" alt='결과 화면' width=600>
 <br>
