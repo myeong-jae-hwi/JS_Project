@@ -4,4 +4,6 @@ JS로 만든거 올리기
 
 ## Clock
 
-👉🏻 [About me!](./Clock/README.md)
+👉🏻 [Clock](./Clock/README.md)
+
+👉🏻 [CountDown](./Clock/README.md)
